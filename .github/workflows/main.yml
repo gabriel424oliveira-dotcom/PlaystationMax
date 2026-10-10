@@ -1,0 +1,26 @@
+
+name: PlaystationMax - Verificar compilacao
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+
+      - name: Verificar ambiente
+        run: |
+          echo "Verificando PlaystationMax"
+          echo "Sistema Linux:"
+          uname -a
+          echo "Compilador C++:"
+          c++ --version
+          echo "Verificando ferramenta PS4:"
+          if command -v orbis-clang >/dev/null 2>&1; then
+            orbis-clang --version
+          else
+            echo "Toolchain PS4 ainda nao configurada."
+          fi
