@@ -1,25 +1,15 @@
-name: PlaystationMax - Verificar ambiente
 
-on:
+name: PlaystationMax - Teste
+
+'on':
   workflow_dispatch:
 
 jobs:
-  verificar:
+  teste:
     runs-on: ubuntu-latest
     steps:
-      - name: Baixar codigo
-        uses: actions/checkout@v4
+      - name: Confirmar workflow
+        run: echo "Workflow reconhecido"
 
-      - name: Verificar projeto
-        run: |
-          echo "Verificando PlaystationMax"
-          pwd
-          ls -la
-          echo "Versao do compilador C++:"
-          c++ --version
-          echo "Verificando ferramentas PS4:"
-          if command -v orbis-clang >/dev/null 2>&1; then
-            orbis-clang --version
-          else
-            echo "Toolchain PS4 ainda nao configurada."
-          fi
+      - name: Listar arquivos
+        run: ls -la
