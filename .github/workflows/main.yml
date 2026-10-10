@@ -1,8 +1,0 @@
-name: PlaystationMax
-'on':
-  workflow_dispatch:
-jobs:
-  teste:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo OK
