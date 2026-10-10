@@ -1,15 +1,8 @@
-
-name: PlaystationMax - Teste
-
+name: PlaystationMax
 'on':
   workflow_dispatch:
-
 jobs:
   teste:
     runs-on: ubuntu-latest
     steps:
-      - name: Confirmar workflow
-        run: echo "Workflow reconhecido"
-
-      - name: Listar arquivos
-        run: ls -la
+      - run: echo OK
