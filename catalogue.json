@@ -1,0 +1,53 @@
+{
+  "app": {
+    "name": "PlaystationMax",
+    "catalogue_version": 1
+  },
+  "items": [
+    {
+      "id": "movie-001",
+      "title": "Meu filme autorizado",
+      "type": "movie",
+      "year": 2025,
+      "cover": "assets/covers/movie.png",
+      "source": {
+        "kind": "network",
+        "url": "http://192.168.1.10:8080/media/movie.mp4"
+      },
+      "rights": {
+        "authorized": true,
+        "notes": "Exemplo fictício; substitua por conteúdo autorizado."
+      }
+    },
+    {
+      "id": "series-001",
+      "title": "Minha série autorizada",
+      "type": "series",
+      "year": 2024,
+      "cover": "assets/covers/series.png",
+      "source": {
+        "kind": "usb",
+        "path": "/mnt/usb0/series/episode-01.mp4"
+      },
+      "rights": {
+        "authorized": true,
+        "notes": "Exemplo fictício."
+      }
+    },
+    {
+      "id": "cartoon-001",
+      "title": "Meu desenho autorizado",
+      "type": "cartoon",
+      "year": 2023,
+      "cover": "assets/covers/cartoon.png",
+      "source": {
+        "kind": "internet",
+        "url": "https://media.example.org/cartoon.mp4"
+      },
+      "rights": {
+        "authorized": true,
+        "notes": "URL de exemplo, não é um vídeo real."
+      }
+    }
+  ]
+}
